@@ -6,3 +6,6 @@
     - calculator keypad
     - operator keys
     - base key component
+
+## Todo
+- app state (detach digits state from `App` component)
