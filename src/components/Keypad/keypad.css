@@ -1,4 +1,11 @@
 .keypad {
+    --border-width: 1px;
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    width: fit-content;
+
+    background-color: #404040;
+    gap: var(--border-width);
+    padding: var(--border-width);
 }
