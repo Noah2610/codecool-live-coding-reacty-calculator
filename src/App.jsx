@@ -1,14 +1,13 @@
 import { useState } from "react";
 import Display from "./components/Display";
 import Keypad from "./components/Keypad";
+import useStore from "./useStore"
 
 function App() {
-    const [digits, setDigits] = useState([1, 2, 3]);
-
     return (
         <div>
-            <Display digits={digits} />
-            <Keypad setDigits={setDigits} />
+            <Display />
+            <Keypad />
         </div>
     );
 }
