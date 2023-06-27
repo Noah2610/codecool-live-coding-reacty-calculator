@@ -3,49 +3,47 @@ import useStore from "../../useStore";
 import "./keypad.css";
 
 export default function Keypad() {
-    const addDigit = useStore((state) => state.addDigit);
-
-    const keys = [7, 8, 9, 4, 5, 6, 1, 2, 3, 0];
+    const addChar = useStore((state) => state.addChar);
 
     return (
         <div className="keypad">
-            <Button onClick={() => addDigit(7)}>
+            <Button onClick={() => addChar(7)}>
                 7
             </Button>
-            <Button onClick={() => addDigit(8)}>
+            <Button onClick={() => addChar(8)}>
                 8
             </Button>
-            <Button onClick={() => addDigit(9)}>
+            <Button onClick={() => addChar(9)}>
                 9
             </Button>
             <Button className="button-highlight">
                 x
             </Button>
-            <Button onClick={() => addDigit(4)}>
+            <Button onClick={() => addChar(4)}>
                 4
             </Button>
-            <Button onClick={() => addDigit(5)}>
+            <Button onClick={() => addChar(5)}>
                 5
             </Button>
-            <Button onClick={() => addDigit(6)}>
+            <Button onClick={() => addChar(6)}>
                 6
             </Button>
             <Button className="button-highlight">
                 -
             </Button>
-            <Button onClick={() => addDigit(1)}>
+            <Button onClick={() => addChar(1)}>
                 1
             </Button>
-            <Button onClick={() => addDigit(2)}>
+            <Button onClick={() => addChar(2)}>
                 2
             </Button>
-            <Button onClick={() => addDigit(3)}>
+            <Button onClick={() => addChar(3)}>
                 3
             </Button>
-            <Button className="button-highlight">
+            <Button className="button-highlight" onClick={() => addChar("+")}>
                 +
             </Button>
-            <Button className="button-wide" onClick={() => addDigit(0)}>
+            <Button className="button-wide" onClick={() => addChar(0)}>
                 0
             </Button>
             <Button>

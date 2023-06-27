@@ -1,9 +1,9 @@
 import { create } from "zustand";
 
 const useStore = create((set) => ({
-    digits: [1, 2, 3],
-    addDigit: (digit) => {
-        set(({ digits }) => ({ digits: [...digits, digit] }));
+    chars: [1, 2, 3],
+    addChar: (char) => {
+        set(({ chars }) => ({ chars: [...chars, char] }));
     },
 }));
 

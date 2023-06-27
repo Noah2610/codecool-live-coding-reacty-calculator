@@ -1,12 +1,12 @@
 import useStore from "../../useStore";
 
 export default function Display() {
-    const digits = useStore((state) => state.digits);
+    const chars = useStore((state) => state.chars);
 
     return (
         <div>
-            {digits.map((digit, i) => (
-                <span key={i}>{digit}</span>
+            {chars.map((char, i) => (
+                <span key={i}>{char}</span>
             ))}
         </div>
     );
