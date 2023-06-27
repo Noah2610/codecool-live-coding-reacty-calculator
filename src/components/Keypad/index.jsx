@@ -4,6 +4,7 @@ import "./keypad.css";
 
 export default function Keypad() {
     const addChar = useStore((state) => state.addChar);
+    const calculate = useStore((state) => state.calculate);
 
     return (
         <div className="keypad">
@@ -16,7 +17,7 @@ export default function Keypad() {
             <Button onClick={() => addChar(9)}>
                 9
             </Button>
-            <Button className="button-highlight">
+            <Button className="button-highlight" onClick={() => addChar("*")}>
                 x
             </Button>
             <Button onClick={() => addChar(4)}>
@@ -28,7 +29,7 @@ export default function Keypad() {
             <Button onClick={() => addChar(6)}>
                 6
             </Button>
-            <Button className="button-highlight">
+            <Button className="button-highlight" onClick={() => addChar("-")}>
                 -
             </Button>
             <Button onClick={() => addChar(1)}>
@@ -49,7 +50,7 @@ export default function Keypad() {
             <Button>
                 .
             </Button>
-            <Button className="button-highlight">
+            <Button className="button-highlight" onClick={calculate}>
                 =
             </Button>
         </div>
